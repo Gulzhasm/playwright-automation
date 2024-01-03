@@ -1,1 +1,1 @@
-run test: npx playwright test "login.test.ts"
+run test in cli: npx playwright test "login.test.ts"

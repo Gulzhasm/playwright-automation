@@ -12,4 +12,18 @@ await page.goto("https://ecommerce-playground.lambdatest.io/");
 await page.hover("//a[@data-toggle='dropdown']//span[contains(.,' My account')]");
 await page.click("'Login'");
 
+await page.fill("input[name='email']", "gulzhasm@gmail.com");
+await page.fill("input[name='password']", "JkDGcxkwZ5L@gdz");
+await page.click("input[value='Login']");
+await page.waitForTimeout(5000);
+
+const newContext = await browser.newContext();
+
+const page1 = await newContext.newPage();
+await page1.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/account");
+await page.waitForTimeout(5000);
+
+
+
+
 })
